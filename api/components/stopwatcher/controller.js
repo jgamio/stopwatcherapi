@@ -1,4 +1,4 @@
-const TABLA = 'stopwatcher';
+const TABLA = 'stopwatcherrecord';
 
 module.exports = function(injectedStore) {
 
@@ -7,6 +7,7 @@ module.exports = function(injectedStore) {
     function getList() {
 
         return store.getList(TABLA);
+
     }
 
     function postItem(body) {
@@ -15,8 +16,10 @@ module.exports = function(injectedStore) {
     }
 
     return {
+
         getList,
         postItem
+
     }
 
 }

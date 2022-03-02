@@ -1,6 +1,6 @@
 'use strict';
 
-const { Model } = require('sequelize');
+const { Sequelize,Model,DataTypes } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   class stopWatcherRecord extends Model {
@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   stopWatcherRecord.init({
-    timeInit: DataTypes.TIME,
-    timeEnd: DataTypes.TIME
+    timeInit: Sequelize.TIME,
+    timeEnd: Sequelize.TIME
   }, {
     sequelize,
     modelName: 'stopWatcherRecord',
