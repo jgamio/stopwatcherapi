@@ -1,11 +1,9 @@
-//const config = require('../config');
+const config = require('../config');
 const { Sequelize, Model, DataTypes,QueryTypes } = require('sequelize');
 
 let sequelize;
 
-    //sequelize = new Sequelize(config.postgresql.database,config.postgresql.user, config.postgresql.password, {
     sequelize = new Sequelize(process.env.POSTGRESQL_DATABASE,process.env.POSTGRESQL_USER, process.env.POSTGRESQL_PASSWORD, {
-        //host: config.postgresql.host,
         host: process.env.POSTGRESQL_HOST,
         dialect: 'postgres',
     });
